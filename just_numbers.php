@@ -38,13 +38,12 @@ $result = mysqli_query($link, $query);
     
 
 
-while($row = $result->fetch_array())
-{
-$rows[] = $row;
+while($row = $result->fetch_array()){
+    $rows[] = $row;
 }
 
-foreach($rows as $row)
-{
+foreach($rows as $row) {
+
     //echo $row['number']." ";
     array_push($just_in_db, $row['number']);
 }
